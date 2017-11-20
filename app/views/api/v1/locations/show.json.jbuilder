@@ -6,6 +6,11 @@ json.current do
   json.status @location.recordings.last.status
 end
 
+json.whateveriwant do
+  json.whatyouwant @location.created_at
+end
+
+
 
 # Output for http://localhost:3000/api/v1/locations/1.json
 
@@ -15,5 +20,8 @@ end
 #   current: {
 #     temp: 30,
 #     status: "sunny"
+#   },
+#   whateveriwant: {
+#     whatyouwant: "2017-11-19T04:54:17.443Z"
 #   }
 # }
